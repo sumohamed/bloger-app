@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 100%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--ff-primary);
+	font-weight: var(--fw-light);
+	color: var(--neutral-gray-600);
+	background-color: var(--neutral-white);
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+ul {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+button {
+	cursor: pointer;
+	border: none;
+	background: none;
+	font-family: inherit;
+}
+
+input,
+textarea {
+	font-family: inherit;
+	border: none;
+	outline: none;
+}

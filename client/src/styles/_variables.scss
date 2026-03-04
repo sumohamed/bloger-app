@@ -1,0 +1,44 @@
+@use "./functions" as f;
+
+:root {
+	// Colors:
+	--primary--red-400: hsl(356, 100%, 66%);
+	--primary--red-500: hsl(355, 100%, 74%);
+	--primary--blue-900: hsl(208, 49%, 24%);
+
+	--neutral-white: hsl(0, 100%, 100%);
+	--neutral-gray-600: hsl(207, 13%, 34%);
+	--neutral-gray-900: hsl(240, 10%, 16%);
+
+	// Background gradient - intro/CTA mobile nav:
+	--gradient-orange: hsl(13, 100%, 72%);
+	--gradient-red: hsl(353, 100%, 62%);
+
+	// Background gradient - body:
+	--gradient-purple-900: hsl(237, 23%, 31%);
+	--gradient-purple-950: hsl(237, 17%, 21%);
+
+	// Font variables:
+	--ff-primary: "Overpass"; //  300, 600
+	--ff-secondary: "Ubuntu"; // 400, 500, 700
+
+	/* Typography - Font Sizes */
+	--fs-h1: clamp(#{f.rem(40)}, 5vw, #{f.rem(64)});
+	--fs-h2: clamp(#{f.rem(28)}, 3vw, #{f.rem(36)});
+	--fs-h3: clamp(#{f.rem(20)}, 2vw, #{f.rem(26)});
+	--fs-body: #{f.rem(16)};
+	--fs-nav: #{f.rem(16)};
+	--fs-btn: #{f.rem(16)};
+	--fs-footer: #{f.rem(14)};
+
+	/* Typography - Line Heights */
+	--lh-heading: 1.2;
+	--lh-body: 1.7;
+
+	/* Typography - Font Weight */
+	--fw-light: 300;
+	--fw-regular: 400;
+	--fw-medium: 500;
+	--fw-semibold: 600;
+	--fw-bold: 700;
+}
