@@ -1,0 +1,67 @@
+@use "../../../styles/main.scss" as *;
+
+.auth-btns {
+	min-width: 240px;
+	display: flex;
+	justify-content: space-between;
+
+	@include breakpoint-down(medium) {
+		flex-direction: column;
+		gap: var(--spacing-md);
+	}
+
+	.login {
+		color: var(--neutral-white);
+		opacity: 0.8;
+		@include breakpoint-down(medium) {
+			color: var(--neutral-gray-900);
+		}
+	}
+
+	.signup {
+		margin-inline: auto;
+		width: fit-content;
+		background-color: var(--neutral-white);
+		color: var(--primary--red-400);
+		padding: rem(16) rem(32);
+		border-radius: rem(32);
+
+		&:hover {
+			color: var(--neutral-white);
+			background-color: var(--primary--red-500);
+		}
+
+		@include breakpoint-down(medium) {
+			color: var(--neutral-white);
+			background-image: linear-gradient(
+				to left,
+				var(--gradient-red),
+				var(--gradient-orange)
+			);
+		}
+	}
+}
+
+// .btn-primary {
+// 	padding: rem(16) rem(32);
+// 	border-radius: rem(32);
+
+// 	&[data-type="primary"] {
+// 		background-color: var(--neutral-white);
+// 		color: var(--primary--red-400);
+// 		&:hover {
+// 			color: var(--neutral-white);
+// 			background-color: var(--primary--red-500);
+// 		}
+// 	}
+// 	&[data-type="secondary"] {
+// 		background-color: transparent;
+// 		color: var(--neutral-white);
+// 		border: 2px solid var(--neutral-white);
+// 		opacity: 0.9;
+// 		&:hover {
+// 			background-color: var(--neutral-white);
+// 			color: var(--primary--red-500);
+// 		}
+// 	}
+// }

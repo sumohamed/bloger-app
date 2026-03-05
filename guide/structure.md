@@ -37,6 +37,14 @@ blogr/
 │ │ │ ├── Blog/
 │ │ │ ├── About/
 │ │ │ ├── Contact/
+| | | |── marketplace/
+| | | ├── features/
+| | | ├── integrations/
+| | | ├── team/
+| | | ├── blogPost/
+| | | ├── careers/
+| | | ├── contact/
+| | | ├── newsletter/
 │ │ │ ├── Dashboard/ # للـ Author بعد Login
 │ │ │ │ ├── Dashboard.tsx
 │ │ │ │ └── sections/

@@ -41,4 +41,14 @@
 	--fw-medium: 500;
 	--fw-semibold: 600;
 	--fw-bold: 700;
+
+	/* Spacing */
+	--spacing-xs: #{f.rem(8)};
+	--spacing-sm: #{f.rem(16)};
+	--spacing-md: #{f.rem(24)};
+	--spacing-lg: #{f.rem(32)};
+	--spacing-xl: #{f.rem(48)};
+	--spacing-2xl: #{f.rem(64)};
+	--spacing-3xl: #{f.rem(96)};
+	--spacing-4xl: #{f.rem(128)};
 }

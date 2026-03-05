@@ -1,3 +1,4 @@
+@use "./breakpoints" as b;
 *,
 *::before,
 *::after {
@@ -14,13 +15,28 @@ html {
 body {
 	font-family: var(--ff-primary);
 	font-weight: var(--fw-light);
+	font-size: var(--fs-body);
+	line-height: var(--lh-body);
 	color: var(--neutral-gray-600);
 	background-color: var(--neutral-white);
 }
 
+.container {
+	max-width: 1180px;
+	margin-inline: auto;
+
+	@include b.breakpoint-down(medium) {
+		padding-inline: var(--spacing-sm);
+	}
+}
+
 a {
+	display: block;
+	font-family: var(--ff-secondary);
+	font-weight: var(--fw-regular);
 	text-decoration: none;
 	color: inherit;
+	transition: all 0.3s;
 }
 
 ul {
@@ -34,9 +50,13 @@ img {
 
 button {
 	cursor: pointer;
+	display: block;
 	border: none;
 	background: none;
-	font-family: inherit;
+	font-family: var(--ff-secondary);
+	font-weight: var(--fw-bold);
+	font-size: var(--fs-btn);
+	transition: all 0.3s;
 }
 
 input,
@@ -44,4 +64,16 @@ textarea {
 	font-family: inherit;
 	border: none;
 	outline: none;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
 }

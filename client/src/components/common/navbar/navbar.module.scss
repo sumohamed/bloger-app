@@ -1,0 +1,57 @@
+@use "../../../styles/main.scss" as *;
+
+.header {
+	position: relative;
+	background-color: transparent;
+	background-color: red;
+	padding-top: var(--spacing-2xl);
+	padding-bottom: var(--spacing-xs);
+
+	.navigation {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: var(--spacing-lg);
+
+		.logo {
+			width: 120px;
+		}
+
+		.burger-icon {
+			font-size: var(--fs-h2);
+			color: var(--neutral-white);
+			padding: var(--spacing-xs);
+			@include breakpoint-up(large) {
+				display: none;
+			}
+		}
+
+		.mobile-nav {
+			position: absolute;
+			top: #{rem(132)};
+			left: 50%;
+			transform: translateX(-50%);
+			padding: var(--spacing-lg);
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: var(--spacing-lg);
+			border-radius: var(--spacing-xs);
+			background-color: var(--neutral-white);
+			@include breakpoint-up(large) {
+				display: none;
+			}
+		}
+
+		.desktop-nav {
+			display: none;
+			@include breakpoint-up(large) {
+				flex: 1;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+		}
+	}
+}

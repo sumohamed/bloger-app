@@ -1,0 +1,103 @@
+@use "../../../styles/main.scss" as *;
+
+.dropdown {
+	// mobile Styling
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-lg);
+	width: 100%;
+
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: #{rem(-16)};
+		left: 0;
+		height: 1px;
+		width: 100%;
+		background-color: color-mix(
+			in srgb,
+			var(--neutral-gray-600) 10%,
+			transparent
+		);
+	}
+
+	&__menu {
+		&--title {
+			cursor: pointer;
+			display: block;
+			font-family: var(--ff-secondary);
+			font-size: var(--fs-nav);
+			font-weight: var(--fw-semibold);
+			color: var(--primary--blue-900);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: var(--spacing-xs);
+
+			&:hover {
+				opacity: 0.7;
+			}
+
+			svg {
+				color: var(--primary--red-400);
+			}
+		}
+		&--list {
+			margin-block: var(--spacing-sm);
+			padding: var(--spacing-lg) var(--spacing-md);
+			border-radius: var(--spacing-xs);
+			background-color: color-mix(
+				in srgb,
+				var(--neutral-gray-600) 5%,
+				transparent
+			);
+		}
+		&--link {
+			text-align: center;
+			font-size: var(--fs-nav);
+			padding-block: var(--spacing-xs);
+			font-weight: var(--fw-semibold);
+			&:hover {
+				font-weight: var(--fw-bold);
+			}
+		}
+	}
+
+	// Desktop Styling
+	@include breakpoint-up(large) {
+		flex-direction: row;
+
+		&::after {
+			display: none;
+		}
+		&__menu {
+			position: relative;
+			&--title {
+				color: var(--neutral-white);
+				opacity: 0.8;
+				transition: all 0.3s;
+				&:hover {
+					text-decoration: underline var(--neutral-white);
+					opacity: 1;
+				}
+
+				svg {
+					color: var(--neutral-white);
+				}
+			}
+
+			&--list {
+				position: absolute;
+				width: 200px;
+				background-color: var(--neutral-white);
+			}
+
+			&--link {
+				text-align: left;
+				font-weight: var(--fw-regular);
+			}
+		}
+	}
+}
