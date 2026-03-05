@@ -1,11 +1,16 @@
 @use "../../../styles/main.scss" as *;
 
 .header {
-	position: relative;
+	// position: relative;
 	background-color: transparent;
-	background-color: red;
 	padding-top: var(--spacing-2xl);
 	padding-bottom: var(--spacing-xs);
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
 
 	.navigation {
 		display: flex;

@@ -1,0 +1,39 @@
+@use "../../../styles/main.scss" as *;
+.hero {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: var(--spacing-md);
+
+	min-height: 70vh;
+	background:
+		url("/images/bg-pattern-intro-mobile.svg") 45% 35% / 340% no-repeat,
+		linear-gradient(to right, var(--gradient-red), var(--gradient-orange));
+
+	@include breakpoint-up(xlarge) {
+		background:
+			url("/images/bg-pattern-intro-desktop.svg") 21% / 225% no-repeat,
+			linear-gradient(to right, var(--gradient-red), var(--gradient-orange));
+	}
+
+	&__content {
+		text-align: center;
+		padding-top: var(--spacing-lg);
+		padding-inline: var(--spacing-xs);
+
+		&--title {
+			color: var(--neutral-white);
+			font-size: var(--fs-h1);
+		}
+		&--desc {
+			color: var(--neutral-white);
+			opacity: 0.8;
+		}
+	}
+
+	.user-actions {
+		display: flex;
+		gap: var(--spacing-md);
+	}
+}

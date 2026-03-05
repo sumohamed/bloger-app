@@ -1,0 +1,27 @@
+@use "./functions" as *;
+
+.btn-primary {
+	padding: var(--spacing-sm) var(--spacing-lg);
+	border-radius: #{rem(32)};
+	font-size: var(--fs-btn);
+	font-weight: var(--fw-semibold);
+
+	&[data-type="primary"] {
+		background-color: var(--neutral-white);
+		color: var(--primary--red-400);
+		&:hover {
+			color: var(--neutral-white);
+			background-color: var(--primary--red-500);
+		}
+	}
+	&[data-type="secondary"] {
+		background-color: transparent;
+		color: var(--neutral-white);
+		border: 2px solid var(--neutral-white);
+		opacity: 0.9;
+		&:hover {
+			background-color: var(--neutral-white);
+			color: var(--primary--red-500);
+		}
+	}
+}
